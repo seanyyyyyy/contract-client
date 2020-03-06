@@ -1,25 +1,18 @@
 package hello;
 
-import com.github.tomakehurst.wiremock.client.WireMock;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.contract.stubrunner.junit.StubRunnerExtension;
 import org.springframework.cloud.contract.stubrunner.junit.StubRunnerRule;
-import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
-import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-//@AutoConfigureWireMock(stubs="IdeaProjects\u2069 ▸ \u2068spring-contract-base-server\u2069 ▸ \u2068build\u2069")
 
 public class ContractRestClientApplicationTest {
 
