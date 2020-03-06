@@ -2,6 +2,9 @@ buildscript {
 	repositories {
 		mavenCentral()
 		mavenLocal()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+		maven { url "https://repo.spring.io/release" }
 	}
 	dependencies {
 		classpath 'org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.2.1.RELEASE'
@@ -19,7 +22,13 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-repositories { mavenCentral() }
+repositories {
+	mavenCentral()
+	mavenLocal()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://repo.spring.io/release" }
+}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -27,6 +36,7 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
+	//testCompile("com.example:contract-server:0.0.1.-SNAPSHOT")
 }
 
 dependencyManagement {
